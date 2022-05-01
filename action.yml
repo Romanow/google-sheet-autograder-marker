@@ -1,0 +1,26 @@
+name: "Github auto grader mark"
+author: "Romanow Alex"
+
+inputs:
+  sheet_id:
+    description: "Sheet ID"
+    requred: true
+  token:
+    description: "JWT token"
+    required: true
+  mark:
+    description: "Mark"
+    required: false
+    default: "'*"
+  base_offset:
+    description: "Base column offset"
+    required: false
+    default: "F"
+
+branding:
+  icon: "check-square"
+  color: "blue"
+
+runs:
+  using: "node16"
+  main: "dist/main.js"
