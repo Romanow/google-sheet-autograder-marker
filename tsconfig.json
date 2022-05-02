@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "alwaysStrict": true,
-    "target": "es6",
-    "module": "commonjs",
+    "target": "es2017",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "lib": [
       "es6"
     ],

@@ -3,19 +3,30 @@ author: "Romanow Alex"
 
 inputs:
   sheet_id:
-    description: "Sheet ID"
+    description: "ID таблицы в Google Sheet"
     requred: true
-  token:
-    description: "JWT token"
+  google_token:
+    description: "Google Service Account token"
+    required: true
+  github_user:
+    description: "Пользователь, который запустил сборку"
+    required: false
+    default: ${{ github.actor }}
+  homework_number:
+    description: "Номер работы"
     required: true
   mark:
-    description: "Mark"
+    description: "Отметка"
     required: false
-    default: "'*"
-  base_offset:
-    description: "Base column offset"
+    default: "'+"
+  column_offset:
+    description: "Базовое смещение колонки"
     required: false
     default: "F"
+  user_column:
+    description: "Номер колонки пользователя"
+    required: false
+    default: "D"
 
 branding:
   icon: "check-square"
@@ -23,4 +34,4 @@ branding:
 
 runs:
   using: "node16"
-  main: "dist/main.js"
+  main: "dist/index.js"
