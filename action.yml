@@ -1,5 +1,6 @@
 name: "Github auto grader mark"
 author: "Romanow Alex"
+description: "Github action to mark successful homework acceptance for autograder"
 
 inputs:
   sheet_id:
