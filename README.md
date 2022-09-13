@@ -59,6 +59,8 @@
    Использовать роль Viewer.
 3. [Включить Google Sheet API](https://console.cloud.google.com/apis/api/sheets.googleapis.com/overview) для Github
    Classroom Autograder.
-4. Добавить Service Account (email) как редактора в Google Sheet.
+4. Создать Credentials для Service Account: `Credetials` -> `Service Accounts` -> `Keys` -> `Add Key` -> `Create new key`: JSON -> `Create`.
+5. Будет скачан файл в фомате `json`, все содержимое этого файла добавить как Organization Secret с именем `GOOGLE_API_KEY`.
+6. Добавить Service Account (email) как редактора в Google Sheet.
 
 Создание Service Account описано [здесь](https://developers.google.com/identity/protocols/oauth2/service-account).
